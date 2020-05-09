@@ -7,7 +7,7 @@ export const fontBlackColor="rgb(41,41,41)";
 export const serverApi="http://127.0.0.1:8101"
 
 //--------------login/register-------------
-export const loginApi="/user/login";
+export const loginApi="/user/log";
 export const registerApi="/user/addupdate";
 
 //-----------------------------loginscreen-student----------------------------------
