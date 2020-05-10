@@ -4,7 +4,7 @@ import { ProfileWrapper } from '../Profile/Profile.style';
 import { Card, CardHeader, CardBody, Row, Col, Table, Input, CardFooter, Button, ButtonGroup, Modal, ModalBody, ModalFooter } from "reactstrap";
 import Avatar from "react-avatar";
 import axios from "axios";
-import { serverApi, editProfile, userById, viewProfile, greenColor } from '../../../constants/constants';
+import { serverApi, editProfile, userById, viewProfile, greenColor, whiteColor } from '../../../constants/constants';
 
 const EditProfile = () => {
     let token = localStorage.getItem("token");
@@ -105,8 +105,11 @@ const EditProfile = () => {
                             <Col>
                                 <div>
                                     <Avatar
-                                        width={390}
-                                        height={295}
+                                        name={fullName}
+                                        color={whiteColor}
+                                        fgColor={greenColor}
+                                        round={true}
+                                        size='120'
                                         // round={true}
                                         // src={Logo}
                                         style={{
@@ -320,7 +323,7 @@ const EditProfile = () => {
                         Successfully Saved
                     </ModalBody>
                     <ModalFooter>
-                        <Button style={{ backgroundColor: greenColor }} size="sm" className='bttn-save' onClick={()=>{setEditSucced(false)}}>Ok</Button>
+                        <Button style={{ backgroundColor: greenColor }} size="sm" className='bttn-save' onClick={() => { setEditSucced(false) }}>Ok</Button>
                     </ModalFooter>
                 </Modal>
             </ProfileWrapper>

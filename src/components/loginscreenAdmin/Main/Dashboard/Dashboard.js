@@ -61,7 +61,7 @@ const Dashboard = () => {
                     <div className="mt-2  card-right-text">
                       Total Students
                       <br />
-                      <span>7</span>
+                      <span>4</span>
                     </div>
                   </Row>
                 </CardBody>
@@ -78,7 +78,7 @@ const Dashboard = () => {
                     <div className="mt-2 card-right-text">
                       Placed Student
                       <br />
-                      <span>7</span>
+                      <span>3</span>
                     </div>
                   </Row>
                 </CardBody>
@@ -112,7 +112,7 @@ const Dashboard = () => {
                     <div className="mt-2  card-right-text">
                       Campus Drives
                       <br />
-                      <span>7</span>
+                      <span>4</span>
                     </div>
                   </Row>
                 </CardBody>
