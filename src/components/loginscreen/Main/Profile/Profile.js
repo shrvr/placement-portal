@@ -3,7 +3,7 @@ import MainNavbar from "../MainNavbar";
 import { ProfileWrapper } from "./Profile.style";
 import { Card, CardHeader, CardBody, Row, Col, Table } from "reactstrap";
 import Avatar from "react-avatar";
-import { viewProfile, serverApi, userById } from "../../../constants/constants";
+import { viewProfile, serverApi, userById, whiteColor, greenColor } from "../../../constants/constants";
 import axios from "axios";
 
 // import Logo from "../../../images/ldrp_logo.png"
@@ -76,8 +76,11 @@ const Profile = () => {
                         <Col>
                             <div>
                                 <Avatar
-                                    width={390}
-                                    height={295}
+                                    name={fullName}
+                                    color={whiteColor}
+                                    fgColor={greenColor}
+                                    round={true}
+                                    size='120'
                                     // round={true}
                                     // src={Logo}
                                     style={{
