@@ -112,7 +112,7 @@ const Dashboard = () => {
                     <div className="mt-2  card-right-text">
                       Campus Drives
                       <br />
-                      <span>4</span>
+                      <span>5</span>
                     </div>
                   </Row>
                 </CardBody>
