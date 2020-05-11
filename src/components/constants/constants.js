@@ -32,3 +32,4 @@ export const applyApi="/user/addToIntrested"
 //------------Add job---------------
 
 export const addDriveApi="/post/addUpdatePost"
+export const adddddd='dffdf'
