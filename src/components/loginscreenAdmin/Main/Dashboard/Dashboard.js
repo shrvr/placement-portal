@@ -20,7 +20,7 @@ const bar = {
       // categoryPercentage:0.5,
       // barThickness: 6,
       // hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [65, 59, 80, 81, 56, 55, 19],
+      data: [65, 59, 80, 80, 56, 55, 19],
     },
   ],
 };
