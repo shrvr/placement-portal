@@ -1,8 +1,8 @@
 import React from "react"
 import { MainNavbarWrapper } from "./MainNavbar.style"
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Input, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faFilter, faEdit, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, Link } from "react-router-dom";
 
 const MainNavbar = props => {
@@ -30,6 +30,18 @@ const MainNavbar = props => {
                                 <NavLink id="edit-profile" tag={Link} to="/loginscreen-admin/edit-profile">
                                     <FontAwesomeIcon icon={faEdit} className="mr-1" />Edit Profile
                                 </NavLink>
+                            </NavItem>
+                        </Nav>
+                        :
+                        <div></div>
+                    }
+                    {location.pathname === "/loginscreen-admin/student-log" ?
+                        <Nav className="ml-auto filter-style" navbar>
+                            <NavItem onClick={props.toggleFilter}>
+                                <div className='search-container'>
+                                    <Input size='sm' placeholder='Search' name='search' />
+                                    <Button size='sm'><FontAwesomeIcon icon={faSearch} className="mr-1" /></Button>
+                                </div>
                             </NavItem>
                         </Nav>
                         :

@@ -25,12 +25,31 @@ export const MainNavbarWrapper = styled.div`
     color:${greenColorLight};
   }
 
-  #edit-profile{
-    color:${greenColor};
+  .search-container{
+    margin-top:4px;
   }
 
-  #edit-profile:hover{
-    color:${greenColorLight};
-  }
+  .search-container Button{
+    font-size:15px;
+    padding-top:3px;
+    padding-bottom:3px;
+    background-color:${greenColor};
+    margin-bottom:3px;
+    border-color: ${greenColor};
 
+    border-radius:0px 15px 15px 0px;
+  }
+  .search-container Input{
+    display:inline-block;
+    margin:0px;
+    width:70%;
+    border-radius:15px 0px 0px 15px;
+}
+
+#edit-profile{
+  color:${greenColor};
+}
+#edit-profile:hover{
+  color:${greenColorLight};
+}
 `;
