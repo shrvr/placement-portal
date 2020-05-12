@@ -17,7 +17,6 @@ export const registerApi="/user/addupdate";
 export const userById="/user/getUserById"
 export const viewProfile="/userProfile/viewUserProfile"
 export const editProfile="/userProfile/addUserProfile"
-
 //==========campus drive=============
 
 export const campusDriveApi="/post/getAllPost"
@@ -28,5 +27,4 @@ export const applyApi="/user/addToIntrested"
 //-----------------------------loginscreen-Admin----------------------------------
 
 //------------Add job---------------
-
 export const addDriveApi="/post/addUpdatePost"
