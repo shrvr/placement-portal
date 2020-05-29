@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button, Input, Label, FormFeedback, Card } from 'reactstrap'
 import { LoginFormWrapper } from './Login.style'
-import {validation} from './validation'
 import Login_NavBar from './Login_NavBar'
 
 const LoginForm = (props) => {
@@ -20,7 +19,6 @@ const LoginForm = (props) => {
                                     name='email'
                                     type='email'
                                     value={props.email}
-                                    // onBlur={props.validation}
                                     invalid={props.emailError}
                                     placeholder="Email"
                                     onChange={props.handleChange}
@@ -33,7 +31,6 @@ const LoginForm = (props) => {
                                     name='password'
                                     type='password'
                                     value={props.password}
-                                    // onBlur={props.validation}
                                     invalid={props.passwordError}
                                     placeholder="Password"
                                     onChange={props.handleChange} />
@@ -63,5 +60,4 @@ const LoginForm = (props) => {
 
     )
 }
-
 export default LoginForm;

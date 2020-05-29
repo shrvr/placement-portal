@@ -59,9 +59,7 @@ class LoginHandles extends Component {
             axios.post(`${serverApi}${loginApi}`, config).then(res => {
                 console.log(res.status)
                 if (res.status === 200) {
-                    //           this.setState({ isLogin: true })
                     localStorage.setItem("token", res.data.data.token)
-                    // localStorage.setItem("id", res.data.id)
                     console.log("response", res)
                     console.log("token", res.data.data.token)
                     console.log("id", res.data.data.id)
@@ -70,9 +68,6 @@ class LoginHandles extends Component {
                         isLogin: true,
                         user_type: res.data.data.user_type
                     })
-                    // console.log("isLogin",this.state.isLogin)
-                    // alert(res.data.message)
-                    //   this.setState(res.data[0].c)
                 } else {
                     console.log("else", res.status)
                     alert(res.data.message)
