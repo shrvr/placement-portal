@@ -11,29 +11,27 @@ const LoginHandles = () => {
         password: '',
         isLogin: false,
         user_type: '',
-        errors: {
-            isError: false,
-            emailError: "",
-            passwordError: ""
-        }
+
+        isError: false,
+        emailError: "",
+        passwordError: ""        
     })
 
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target
         type === "checkbox" ?
             setLoginCred({ ...loginCred, [name] : checked })
-            
             :
             setLoginCred({ ...loginCred, [name] : value}) 
     }
 
     const login = () => {
         const erro = validation(loginCred.email, loginCred.password);
-        loginCred.errors = erro
+        // loginCred.isError=erro.isErrors
+        setLoginCred({...loginCred,...erro})
 
-        setLoginCred({...loginCred})
         console.log("cred", loginCred)
-        if (!loginCred.errors.isError) {
+        if (!erro.isError) {
             const config = {
                 headers: {
                     "Content-Type": "application/json",
@@ -58,6 +56,7 @@ const LoginHandles = () => {
                     alert(res.data.message)
                 }
             }).catch(err => alert(err.response.data.message))
+        
         }
     }
 

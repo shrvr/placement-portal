@@ -5,6 +5,7 @@ import { LoginFormWrapper } from '../login/Login.style';
 import Login_NavBar from '../login/Login_NavBar';
 
 const RegisterForm = props => {
+    console.log("props_reg",props)
     return (
         <div>
             <LoginFormWrapper>

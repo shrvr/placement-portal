@@ -5,7 +5,6 @@ import { LoginFormWrapper } from './Login.style'
 import Login_NavBar from './Login_NavBar'
 
 const LoginForm = (props) => {
-    console.log("loginCred",props)
     return (
         <div>
             <LoginFormWrapper >
@@ -24,7 +23,7 @@ const LoginForm = (props) => {
                                     placeholder="Email"
                                     onChange={props.handleChange}
                                 />
-                                <FormFeedback>{props.errors.emailError}</FormFeedback>
+                                <FormFeedback>{props.emailError}</FormFeedback>
                             </div>
                             <div >
                                 <Label>Password</Label>
@@ -35,7 +34,7 @@ const LoginForm = (props) => {
                                     invalid={props.passwordError}
                                     placeholder="Password"
                                     onChange={props.handleChange} />
-                                <FormFeedback>{props.errors.passwordError}</FormFeedback>
+                                <FormFeedback>{props.passwordError}</FormFeedback>
                             </div>
                             <div>
                                 <Button

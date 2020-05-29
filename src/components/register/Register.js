@@ -5,7 +5,7 @@ import axios from "axios"
 import { registerApi, serverApi } from '../constants/constants';
 import { validation } from '../login/validation'
 
-const Register = () => {
+export const Register = () => {
 
     const [signupCred, setSignupCred] = useState({
         first_name: '',
@@ -15,15 +15,15 @@ const Register = () => {
         password: '',
         c_password: '',
         isRegister: false,
-        errors: {
-            isError: false,
-            emailError: "",
-            passwordError: "",
-            c_passwordError: "",
-            first_nameError: "",
-            last_nameError: "",
-            enrollError: ''
-        }
+
+        isError: false,
+        emailError: "",
+        passwordError: "",
+        c_passwordError: "",
+        first_nameError: "",
+        last_nameError: "",
+        enrollError: ''
+        
     })
 
 
@@ -37,14 +37,10 @@ const Register = () => {
     }
 
     const register = () => {
-        const err = validation(signupCred.email, signupCred.password, signupCred.csignupCred_password, signupCred.fsignupCredirst_name, signupCred.signupCredlast_name, signupCred.enroll);
-        signupCred.errors = err
+        const err = validation(signupCred.email, signupCred.password, signupCred.c_password, signupCred.first_name, signupCred.last_name, signupCred.enroll);        
+        setSignupCred({...signupCred,...err})
 
-        setSignupCred({
-            ...signupCred
-        })
-
-        if (!signupCred.errors.isError) {
+        if (!err.isError) {
             const config = {
                 headers: {
                     "Content-Type": "application/json",
