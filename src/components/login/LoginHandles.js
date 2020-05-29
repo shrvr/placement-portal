@@ -40,39 +40,6 @@ class LoginHandles extends Component {
             })
     }
 
-    // validation() {
-    //     let isError = false
-    //     const errors = {
-    //         emailError: "",
-    //         passwordError: ""
-    //     };
-
-    //     const emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    //     if (this.state.email === "") {
-    //         isError = true;
-    //         errors.emailError = "Please Enter email";
-    //     }
-    //     else {
-    //         if (!emailRex.test(this.state.email)) {
-    //             isError = true;
-    //             errors.emailError = "Requires valid email";
-    //         }
-    //     }
-
-    //     if (this.state.password === "") {
-    //         isError = true;
-    //         errors.passwordError = "Please Enter Password";
-    //     }
-
-    //     this.setState({
-    //         ...this.state,
-    //         ...errors
-    //     });
-
-    //     return isError;
-    // };
-
     login() {
         const err=validation(this.state.email,this.state.password,this.state.errors);
         this.state.errors=err
@@ -80,9 +47,6 @@ class LoginHandles extends Component {
         this.setState({
             ...this.state.errors
         })    
-
-        // console.log("err",err)
-        // console.log("errors",this.state.errors)
      
         if (!this.state.errors.isError) {
             const config = {
