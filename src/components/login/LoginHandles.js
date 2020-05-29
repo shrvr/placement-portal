@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {validation} from './validation'
 import LoginForm from './LoginForm';
 import axios from "axios"
 // import {handleChange2} from '../handleChange';
@@ -6,6 +7,8 @@ import {
     Redirect
 } from "react-router-dom";
 import { loginApi, serverApi } from '../constants/constants';
+
+// const LoginHandles =()=>{}
 
 class LoginHandles extends Component {
     constructor() {
@@ -15,10 +18,13 @@ class LoginHandles extends Component {
             email: '',
             password: '',
             isLogin: false,
-            user_type: '' 
+            user_type: '',
+            errors:{
+                isError: false,
+                emailError: "",
+                passwordError: ""}
         }
         this.handleChange = this.handleChange.bind(this)
-        this.validation = this.validation.bind(this)
         this.login = this.login.bind(this)
     }
 
@@ -34,48 +40,51 @@ class LoginHandles extends Component {
             })
     }
 
-    validation() {
-        let isError = false
-        const errors = {
-            emailError: "",
-            passwordError: ""
-        };
+    // validation() {
+    //     let isError = false
+    //     const errors = {
+    //         emailError: "",
+    //         passwordError: ""
+    //     };
 
-        const emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //     const emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        if (this.state.email === "") {
-            isError = true;
-            errors.emailError = "Please Enter email";
-        }
-        else {
-            if (!emailRex.test(this.state.email)) {
-                isError = true;
-                errors.emailError = "Requires valid email";
-            }
-        }
+    //     if (this.state.email === "") {
+    //         isError = true;
+    //         errors.emailError = "Please Enter email";
+    //     }
+    //     else {
+    //         if (!emailRex.test(this.state.email)) {
+    //             isError = true;
+    //             errors.emailError = "Requires valid email";
+    //         }
+    //     }
 
-        if (this.state.password === "") {
-            isError = true;
-            errors.passwordError = "Please Enter Password";
-        }
+    //     if (this.state.password === "") {
+    //         isError = true;
+    //         errors.passwordError = "Please Enter Password";
+    //     }
 
-        this.setState({
-            ...this.state,
-            ...errors
-        });
+    //     this.setState({
+    //         ...this.state,
+    //         ...errors
+    //     });
 
-        return isError;
-    };
+    //     return isError;
+    // };
 
     login() {
-        const err = this.validation();
+        const err=validation(this.state.email,this.state.password,this.state.errors);
+        this.state.errors=err
 
-        // if(!err){
-        //     localStorage.setItem("token","dbdjhsdgbfsgdsfsd")
-        //     this.setState({isLogin:1})
-        //     alert("login succesfull")
-        // }
-        if (!err) {
+        this.setState({
+            ...this.state.errors
+        })    
+
+        // console.log("err",err)
+        // console.log("errors",this.state.errors)
+     
+        if (!this.state.errors.isError) {
             const config = {
                 headers: {
                     "Content-Type": "application/json",
@@ -95,7 +104,7 @@ class LoginHandles extends Component {
 
                     this.setState({
                         isLogin: true,
-                        user_type:res.data.data.user_type
+                        user_type: res.data.data.user_type
                     })
                     // console.log("isLogin",this.state.isLogin)
                     // alert(res.data.message)
@@ -108,7 +117,6 @@ class LoginHandles extends Component {
         }
 
     }
-
 
     render() {
         if (this.state.isLogin) {
@@ -124,7 +132,6 @@ class LoginHandles extends Component {
         return (
             <LoginForm handleChange={this.handleChange}
                 login={this.login}
-                validation={this.validation}
                 {...this.state} />
         )
     }
