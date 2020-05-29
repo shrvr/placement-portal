@@ -1,69 +1,67 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import RegisterForm from './RegisterForm';
 import { Redirect } from 'react-router-dom';
 import axios from "axios"
 import { registerApi, serverApi } from '../constants/constants';
 import { validation } from '../login/validation'
-class Register extends Component {
-    constructor() {
-        super()
-        this.state = {
-            first_name: '',
-            last_name: '',
-            email: '',
-            enroll: '',
-            password: '',
-            c_password: '',
-            isRegister: false,
-            errors: {
-                isError: false,
-                emailError: "",
-                passwordError: "",
-                c_passwordError: "",
-                first_nameError: "",
-                last_nameError: "",
-                enrollError: ''
-            }
-        }
-        this.handleChange = this.handleChange.bind(this)
-        this.register = this.register.bind(this)
-    }
 
-    handleChange(event) {
+const Register = () => {
+
+    const [signupCred, setSignupCred] = useState({
+        first_name: '',
+        last_name: '',
+        email: '',
+        enroll: '',
+        password: '',
+        c_password: '',
+        isRegister: false,
+        errors: {
+            isError: false,
+            emailError: "",
+            passwordError: "",
+            c_passwordError: "",
+            first_nameError: "",
+            last_nameError: "",
+            enrollError: ''
+        }
+    })
+
+
+    const handleChange = (event) => {
         const { name, value, type, checked } = event.target
         type === "checkbox" ?
-            this.setState({
-                [name]: checked
-            })
+            setSignupCred({ ...signupCred, [name]: checked })
+
             :
-            this.setState({
-                [name]: value
-            })
+            setSignupCred({ ...signupCred, [name]: value })
     }
 
-    register() {
-        const err = validation(this.state.email, this.state.password, this.state.c_password, this.state.first_name, this.state.last_name, this.state.enroll);
-        this.state.errors = err
+    const register = () => {
+        const err = validation(signupCred.email, signupCred.password, signupCred.csignupCred_password, signupCred.fsignupCredirst_name, signupCred.signupCredlast_name, signupCred.enroll);
+        signupCred.errors = err
 
-        this.setState({
-            ...this.state.errors
+        setSignupCred({
+            ...signupCred
         })
 
-        if (!this.state.errors.isError) {
+        if (!signupCred.errors.isError) {
             const config = {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                first_name: this.state.first_name,
-                last_name: this.state.last_name,
-                email: this.state.email,
-                enroll: this.state.enroll,
-                password: this.state.password,
+                first_name: signupCred.first_name,
+                last_name: signupCred.last_name,
+                email: signupCred.email,
+                enroll: signupCred.enroll,
+                password: signupCred.password,
             }
             axios.post(`${serverApi}${registerApi}`, config).then(res => {
                 console.log(res.status)
                 if (res.status === 200) {
-                    this.setState({ isRegister: true })
+                    setSignupCred({
+                        ...signupCred,
+                        isRegister: true
+                    })
                     alert(res.data.message)
                     //   this.setState(res.data[0].c)
                 } else {
@@ -73,18 +71,16 @@ class Register extends Component {
         }
     }
 
-    render() {
-        if (this.state.isRegister)
-            return (
-                <Redirect to="/" />
-            )
+    if (signupCred.isRegister)
         return (
-            <RegisterForm handleChange={this.handleChange}
-                register={this.register}
-                {...this.state}
-            />
+            <Redirect to="/" />
         )
-    }
+    return (
+        <RegisterForm handleChange={handleChange}
+            register={register}
+            {...signupCred}
+        />
+        )
 }
 
 export default Register;

@@ -5,6 +5,7 @@ import { LoginFormWrapper } from './Login.style'
 import Login_NavBar from './Login_NavBar'
 
 const LoginForm = (props) => {
+    console.log("loginCred",props)
     return (
         <div>
             <LoginFormWrapper >
