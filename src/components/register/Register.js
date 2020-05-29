@@ -5,7 +5,7 @@ import axios from "axios"
 import { registerApi, serverApi } from '../constants/constants';
 import { validation } from '../login/validation'
 
-export const Register = () => {
+const Register = () => {
 
     const [signupCred, setSignupCred] = useState({
         first_name: '',
@@ -22,10 +22,8 @@ export const Register = () => {
         c_passwordError: "",
         first_nameError: "",
         last_nameError: "",
-        enrollError: ''
-        
+        enrollError: ''      
     })
-
 
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target

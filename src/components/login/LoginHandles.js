@@ -75,27 +75,6 @@ const LoginHandles = () => {
             login={login}
             {...loginCred} />
     )
-    // return (<div>
-    //     <button onClick={() => { handleChange() }} >submit</button>
-    //     <h5>{loginCred.user_type}</h5>
-    // </div>)
-    // render() {
-    //     if (this.state.isLogin) {
-    //         if (this.state.user_type === "Admin")
-    //             return (
-    //                 <Redirect to="/loginscreen-admin" />
-    //             )
-    //         else
-    //             return (
-    //                 <Redirect to="/loginscreen" />
-    //             )
-    //     }
-    //     return (
-    //         <LoginForm handleChange={this.handleChange}
-    //             login={this.login}
-    //             {...this.state} />
-    //     )
-    // }
 }
 
 export default LoginHandles;

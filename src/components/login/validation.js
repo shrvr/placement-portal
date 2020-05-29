@@ -1,5 +1,3 @@
-import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
-
 export const validation = (email, password, c_password = null, first_name = null, last_name = null, enrollment = null) => {
     const errors = {
         isError: false,
