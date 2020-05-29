@@ -63,6 +63,6 @@ export const validation = (email, password, c_password = null, first_name = null
             }
         }
     }
-    console.log(errors)
+    // console.log(errors)
     return errors;
 };

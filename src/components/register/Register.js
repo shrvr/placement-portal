@@ -26,7 +26,6 @@ class Register extends Component {
             }
         }
         this.handleChange = this.handleChange.bind(this)
-        // this.validation = this.validation.bind(this)
         this.register = this.register.bind(this)
     }
 
@@ -42,79 +41,10 @@ class Register extends Component {
             })
     }
 
-    // validation() {
-    //     let isError = false;
-    //     const errors = {
-    //         first_nameError: "",
-    //         last_nameError: "",
-    //         emailError: "",
-    //         enrollError: '',
-    //         passwordError: "",
-    //         c_passwordError: ""
-    //     };
-
-    //     const emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    //     if (this.state.first_name === "") {
-    //         isError = true;
-    //         errors.first_nameError = "Please Enter First name";
-    //     }
-    //     if (this.state.last_name === "") {
-    //         isError = true;
-    //         errors.last_nameError = "Please Enter Last name";
-    //     }
-    //     if (this.state.email === "") {
-    //         isError = true;
-    //         errors.emailError = "Please Enter email";
-    //     }
-    //     else {
-    //         if (!emailRex.test(this.state.email)) {
-    //             isError = true;
-    //             console.log("isError", isError)
-    //             errors.emailError = "Requires valid email";
-    //         }
-
-    //     }
-    //     if (this.state.enroll === "") {
-    //         isError = true;
-    //         errors.enrollError = "Please Enter Enrollment number";
-    //     }
-
-    //     if (this.state.password === "") {
-    //         isError = true;
-    //         errors.passwordError = "Please Enter Password";
-    //     } else {
-    //         if (this.state.password !== this.state.c_password) {
-    //             isError = true;
-    //             errors.passwordError = "Passwords does not match";
-    //         }
-    //     }
-    //     if (this.state.c_password === "") {
-    //         isError = true;
-    //         errors.c_passwordError = "Please Enter Password";
-    //     } else {
-    //         if (this.state.password !== this.state.c_password) {
-    //             isError = true;
-    //             errors.c_passwordError = "Passwords does not match";
-    //         }
-    //     }
-
-    //     this.setState({
-    //         ...this.state,
-    //         ...errors
-    //     });
-
-    //     return isError;
-    // };
-
     register() {
         const err = validation(this.state.email, this.state.password, this.state.c_password, this.state.first_name, this.state.last_name, this.state.enroll);
         this.state.errors = err
 
-        // if (!err) {
-        //     this.setState({ isRegister: 1 })
-        //     alert("Registration succesfull")
-        // }
         this.setState({
             ...this.state.errors
         })
