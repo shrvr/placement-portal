@@ -27,9 +27,11 @@ function App() {
             <Route path="/loginscreen-admin">
               <Login_Protected Target={LoginScreenAdmin} />
             </Route>
+
             <Route path="/loginscreen">
               <Login_Protected Target={LoginScreen} />
             </Route>
+
             <Route path="/fpassword">
               <ForgotPassword />
             </Route>
