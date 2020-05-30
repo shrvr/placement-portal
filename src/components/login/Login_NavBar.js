@@ -1,7 +1,5 @@
 import React from "react"
-import {
-    Navbar,
-    NavbarBrand } from "reactstrap";
+import {Navbar, NavbarBrand } from "reactstrap";
 import { NavBarWrapper } from "../loginscreen/NavBar.style.js";
 import Logo from "../images/ldrp_logo.png"
 const Login_NavBar = () => {
