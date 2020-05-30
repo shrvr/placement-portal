@@ -19,7 +19,6 @@ const SideBar = () => {
             </Navbar>
             <div className="text-left ">
               <Nav vertical className="list-unstyled pb-3">
-
                 <NavItem >
                   <NavLink className="menu-navlink-style"> 
                     <FontAwesomeIcon icon={faBars} className="mr-2" />MENU
@@ -43,6 +42,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faBriefcase} className="mr-2" />Add Drive
                   </NavLink>
                 </NavItem>
+                
                 <NavItem >
                   <NavLink className="navlink-style" tag={Link} to={`${match.url}/student-log`}>
                     <FontAwesomeIcon icon={faDatabase} className="mr-2" />Student Log

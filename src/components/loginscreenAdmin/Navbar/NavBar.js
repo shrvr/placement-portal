@@ -1,24 +1,7 @@
 import React, { useState ,useEffect} from "react";
 import {
-  Button,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  NavbarBrand,
-  Popover,
-  PopoverBody,
-  Tooltip,
-  Badge,
-  Modal,
-  ModalFooter,
-  ModalBody,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  Button,Collapse,Navbar,NavbarToggler,Nav,NavItem,NavLink,NavbarBrand,Popover,PopoverBody,Tooltip,Badge,Modal,ModalFooter,
+  ModalBody,Dropdown,DropdownToggle,DropdownMenu,DropdownItem
 } from "reactstrap";
 
 import { NavBarWrapper } from "./NavBar.style";
@@ -30,7 +13,6 @@ import { whiteColor, greenColor,userById, serverApi} from "../../constants/const
 import { Link } from "react-router-dom";
 
 import axios from "axios"
-
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,7 +56,6 @@ const NavBar = (props) => {
   return (
     <div>
       <NavBarWrapper>
-
         {/* //Navbar */}
 
         <Navbar light expand="md" className="background-style">
