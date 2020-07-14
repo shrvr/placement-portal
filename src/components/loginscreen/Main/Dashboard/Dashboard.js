@@ -7,7 +7,6 @@ import { Bar } from 'react-chartjs-2';
 import { greenColor } from "../../../constants/constants";
 import MainNavbar from "../MainNavbar";
 
-
 const bar = {
   labels: ['Computer', 'IT', 'EC', 'Electrical', 'Civil', 'Automobile', 'Machanical'],
   datasets: [
