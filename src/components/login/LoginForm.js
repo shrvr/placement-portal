@@ -14,7 +14,7 @@ const LoginForm = (props) => {
                         <Card className="login-form card-login">
                             <h4 className="text-center"><b>LOGIN</b></h4>
                             <div>
-                                <Label>Email</Label>
+                                <Label>Gmail</Label>
                                 <Input
                                     name='email'
                                     type='email'
