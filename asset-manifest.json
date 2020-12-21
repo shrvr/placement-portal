@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/placement-portal/static/css/main.69eda509.chunk.css",
+    "main.js": "/placement-portal/static/js/main.aa685f18.chunk.js",
+    "main.js.map": "/placement-portal/static/js/main.aa685f18.chunk.js.map",
+    "runtime-main.js": "/placement-portal/static/js/runtime-main.f6e6181a.js",
+    "runtime-main.js.map": "/placement-portal/static/js/runtime-main.f6e6181a.js.map",
+    "static/css/2.3e575b9f.chunk.css": "/placement-portal/static/css/2.3e575b9f.chunk.css",
+    "static/js/2.b443f9ca.chunk.js": "/placement-portal/static/js/2.b443f9ca.chunk.js",
+    "static/js/2.b443f9ca.chunk.js.map": "/placement-portal/static/js/2.b443f9ca.chunk.js.map",
+    "index.html": "/placement-portal/index.html",
+    "precache-manifest.bfaea5daf1006dd2f290a0620452b332.js": "/placement-portal/precache-manifest.bfaea5daf1006dd2f290a0620452b332.js",
+    "service-worker.js": "/placement-portal/service-worker.js",
+    "static/css/2.3e575b9f.chunk.css.map": "/placement-portal/static/css/2.3e575b9f.chunk.css.map",
+    "static/css/main.69eda509.chunk.css.map": "/placement-portal/static/css/main.69eda509.chunk.css.map",
+    "static/js/2.b443f9ca.chunk.js.LICENSE.txt": "/placement-portal/static/js/2.b443f9ca.chunk.js.LICENSE.txt",
+    "static/media/capgemini_logo.png": "/placement-portal/static/media/capgemini_logo.39fe7084.png",
+    "static/media/ldrp_logo.png": "/placement-portal/static/media/ldrp_logo.a972e5a0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f6e6181a.js",
+    "static/css/2.3e575b9f.chunk.css",
+    "static/js/2.b443f9ca.chunk.js",
+    "static/css/main.69eda509.chunk.css",
+    "static/js/main.aa685f18.chunk.js"
+  ]
+}
