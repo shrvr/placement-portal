@@ -101,11 +101,11 @@ const RegisterForm = props => {
                             </Button>
                             </div>
                             <div className="text-center">
-                                <Link to="/">
+                                <Link to="/placement-portal">
                                     Log In
                                 </Link>
                                 <span className="p-2">|</span>
-                                <Link to="/fpassword">
+                                <Link to="/placement-portal/fpassword">
                                     Forgot password
                                 </Link>
                                 

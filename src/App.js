@@ -20,23 +20,23 @@ function App() {
         <Router >
           <div>
           <Switch>
-            <Route path="placement-portal/register">
+            <Route path="/placement-portal/register">
               <Protected Target={Register} />
             </Route>
 
-            <Route path="placement-portal/loginscreen-admin">
+            <Route path="/placement-portal/loginscreen-admin">
               <Login_Protected Target={LoginScreenAdmin} />
             </Route>
 
-            <Route path="placement-portal/loginscreen">
+            <Route path="/placement-portal/loginscreen">
               <Login_Protected Target={LoginScreen} />
             </Route>
 
-            <Route path="placement-portal/fpassword">
+            <Route path="/placement-portal/fpassword">
               <ForgotPassword />
             </Route>
 
-            <Route path="placement-portal/">
+            <Route path="/placement-portal">
               <Protected Target={LoginHandles} />
             </Route>
           </Switch>

@@ -33,7 +33,7 @@ class ForgotPassword extends Component {
                 </div>
                 <br />
                 <div>
-                    <Link to="/">
+                    <Link to="/placement-portal">
                         Login
                     </Link>
                 </div>

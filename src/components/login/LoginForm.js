@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 import { Button, Input, Label, FormFeedback, Card } from 'reactstrap'
 import { LoginFormWrapper } from './Login.style'
 import Login_NavBar from './Login_NavBar'
 
 const LoginForm = (props) => {
+    let match=useRouteMatch();
     return (
         <div>
             <LoginFormWrapper >
@@ -44,11 +45,11 @@ const LoginForm = (props) => {
                             </Button>
                             </div>
                             <div className="text-center">
-                                <Link to="/register">
+                                <Link to={`${match.path}/register`}>
                                     Sign Up
                                 </Link>
                                 <span className="p-2">|</span>
-                                <Link to="/fpassword">
+                                <Link to={`${match.path}/fpassword`}>
                                     Forgot password
                                 </Link>
                             </div>
