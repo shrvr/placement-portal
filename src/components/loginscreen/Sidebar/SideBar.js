@@ -51,7 +51,7 @@ const SideBar = () => {
                 </NavItem> */}
 
                 <NavItem >
-                  <NavLink className="navlink-style" tag={Link} to={'/'}>
+                  <NavLink className="navlink-style" tag={Link} to={'/placement-portal'}>
                     <FontAwesomeIcon icon={faComment} className="mr-2" />FeedBack
                   </NavLink>
                 </NavItem>

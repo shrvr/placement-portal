@@ -15,7 +15,7 @@ const MainNavbar = props => {
                     <NavbarBrand className="navbrand-style">
                         {props.title}
                     </NavbarBrand>
-                    {location.pathname === "/loginscreen/placement-drives" ?
+                    {location.pathname === "/placement-portal/loginscreen/placement-drives" ?
                         <Nav className="ml-auto filter-style" navbar>
                             <NavItem onClick={props.toggleFilter}>
                                 <FontAwesomeIcon icon={faFilter} className="mr-1" />Filter
@@ -24,10 +24,10 @@ const MainNavbar = props => {
                         :
                         <div></div>
                     }
-                    {location.pathname === "/loginscreen/profile" ?
+                    {location.pathname === "/placement-portal/loginscreen/profile" ?
                         <Nav className="ml-auto filter-style" navbar>
                             <NavItem  >
-                                <NavLink id="edit-profile" tag={Link} to="/loginscreen/edit-profile">
+                                <NavLink id="edit-profile" tag={Link} to="/placement-portal/loginscreen/edit-profile">
                                     <FontAwesomeIcon icon={faEdit} className="mr-1" />Edit Profile
                                 </NavLink>
                             </NavItem>

@@ -12,7 +12,7 @@ const LoginScreen = () => {
     setisLogout(true);
   }
   if (isLogout)
-    return(<Redirect to="/"/>)
+    return(<Redirect to="/placement-portal"/>)
   else
       return (
       <div>

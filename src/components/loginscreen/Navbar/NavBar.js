@@ -97,7 +97,7 @@ const NavBar = (props) => {
                       </DropdownToggle>
 
                       <DropdownMenu className="dropdown-style">
-                        <Link to="/loginscreen/profile"
+                        <Link to="/placement-portal/loginscreen/profile"
                           style={{ textDecoration: "none" }}
                         >
                           <DropdownItem className="dropdown-item">Profile</DropdownItem>
