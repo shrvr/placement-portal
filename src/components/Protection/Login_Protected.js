@@ -6,7 +6,7 @@ import {
 function Login_Protected(props) {
     const Target = props.Target
     var token = localStorage.getItem('token')
-    return <div>{token ? <Target/> : <Redirect to ="/" />}</div>
+    return <div>{token ? <Target/> : <Redirect to ="/placement-portal" />}</div>
 }
 
 export default Login_Protected;

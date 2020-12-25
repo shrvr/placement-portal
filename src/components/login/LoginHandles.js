@@ -63,11 +63,11 @@ const LoginHandles = () => {
     if (loginCred.isLogin) {
         if (loginCred.user_type === "Admin")
             return (
-                <Redirect to="/loginscreen-admin" />
+                <Redirect to="placement-portal/loginscreen-admin" />
             )
         else
             return (
-                <Redirect to="/loginscreen" />
+                <Redirect to="/placement-portal/loginscreen" />
             )
     }
     return (

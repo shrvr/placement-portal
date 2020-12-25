@@ -6,7 +6,7 @@ import {
 function Protected(props) {
     const Target = props.Target
     var token = localStorage.getItem('token')
-    return <div>{token ? <Redirect to ="/loginscreen" /> : <Target />}</div>
+    return <div>{token ? <Redirect to ="placement-portal/loginscreen" /> : <Target />}</div>
 }
 
 export default Protected;
