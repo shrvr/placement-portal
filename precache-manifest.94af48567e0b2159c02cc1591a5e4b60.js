@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "36d010d88e22bed8a85b32343552a485",
+    "revision": "0e754fa5aef7963414f7987d150a3a69",
     "url": "/placement-portal/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/placement-portal/static/css/2.3e575b9f.chunk.css"
   },
   {
-    "revision": "1d08dcffbd64a9040b52",
+    "revision": "b4312b91e24fbdb4cf94",
     "url": "/placement-portal/static/css/main.69eda509.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/placement-portal/static/js/2.b443f9ca.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1d08dcffbd64a9040b52",
-    "url": "/placement-portal/static/js/main.aa685f18.chunk.js"
+    "revision": "b4312b91e24fbdb4cf94",
+    "url": "/placement-portal/static/js/main.f42e92e3.chunk.js"
   },
   {
     "revision": "685c57c06b3960f8ff6d",
