@@ -4,7 +4,7 @@ export const whiteColor="rgb(239,239,239)";
 export const fontBlackColor="rgb(41,41,41)";
 
 //--------APIs--------------
-export const serverApi="http://d908f4c2c553.ngrok.io"
+export const serverApi="https://fd693023e7d3.ngrok.io"
 
 //--------------login/register-------------
 export const loginApi="/user/login";
