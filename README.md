@@ -16,7 +16,7 @@ Placement Portal is a web app to provide placement solutions to universities. It
 <img src="https://drive.google.com/uc?id=1iYcVF2ZwhA_AnOMwRXhnOp7E7R1Ss6e-" alt="click here to see" width="90%"/>
 
 #### Edit Profile
-<img src="https://drive.google.com/uc?id=1yhiKgxrDXAw9OpslVqn6aAbRfWlKtOa9" alt="click here to see" width="90%"/>
+<img src="https://drive.google.com/uc?id=1cIgEr4QHhTbXLtimWSTZisqf8ARDkj-S" alt="click here to see" width="90%"/>
 
 #### Job postings list
 <img src="https://drive.google.com/uc?id=1cQZ6hGeij4CkjaE3kHc0U7Z252yedaoN" alt="click here to see" width="90%"/>
